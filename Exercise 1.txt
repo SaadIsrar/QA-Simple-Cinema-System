@@ -1,0 +1,74 @@
+Exercise 1
+There are four object oriented programming principles such as abstraction, inheritance, polymorphism and encapsulation. All of the principles are described below.
+
+Abstraction 
+Abstraction can be defined as a process where simple things can be used to represent complexity. In abstraction simple things like object, classes and variables represents more complex underlying code and data. In abstraction it also allows programmers to use and create useful and reusable tools. Abstract classes can be made within the abstract class which can be implemented by subclasses.
+Example: 
+
+abstract class Car{
+   abstract void move();
+}
+class BMW extends Car{
+  void move(){
+   //describe the BMW category	
+  }
+}
+
+Inheritance 
+
+Inheritance can be defined as special feature of an object oriented programming. In inheritance, this is where the programmer can make new classes which can share some of the attributes of existing classes also known as subclasses. It works as when its class adopt the properties of another. Keyword as extends is used to define a new class that inherits the properties of an old class.
+Example:
+
+class Reptile {
+}
+class Crocodile extends Reptile {
+}
+
+Encapsulation 
+Encapsulation can be defined as a protective barrier which keeps the fields in a class private rather than providing access through the public methods. It keeps the data and the code safe within the class itself. It is a very powerful concept in Java.  It helps the original code private without breaking it for others who have adopted it in the meantime. 
+Example:
+
+// save as Student.java
+package com.javatpoint;
+public class Student {
+ private String name;
+ public String getName() {
+  return name;
+ }
+ public void setName(String name) {
+  this.name = name
+ }
+}
+// save as Test.java
+package com.javatpoint;
+class Test {
+ public static void main(String[] args) {
+  Student s = new Student();
+  s.setName(“saad”);
+  System.out.println(s.getName());
+ }
+}
+In this example, the variable used as name is kept encapsulated or private.  Accessing it through publicly will result as in an error.
+
+Polymorphism
+In Java polymorphism can be defined as an object oriented programming concept where it lets programmers to use same word to mean different things in different context. There are two forms of polymorphism such as method overloading and method overriding. Method overloading is implied when the code itself implies different meaning. Method overriding defines as when the different meanings are implied by the values of the supplied variables.
+Example:
+
+class Car{
+ void sound(){
+   System.out.println("Car makes a sound");
+  }
+}
+class Audi extends Car{
+ void sound(){
+ System.out.println("BROOOOM");
+  }
+}
+Another example of a polymorphism is method overloading which can operate different numbers of different arguments as mentioned above. 
+Example:
+int addNumber(int x,int y){
+ return x + y;
+}
+int addNumber(int x, int y, int z){
+ return x + y + z;
+}
